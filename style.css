@@ -27,45 +27,57 @@ header a {
   font-size: 2.5rem;
   padding: 1rem;
 }
-@media (max-width: 600px) {
-  
-  .links-menu {
-    display: none;
-  }
-}
+
 main{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding: 0;
-  margin: 5rem 5rem;
-  height: 500px;
-  background-image: url("./assets/team.jpg");
-  background-position: right;
-  background-size: 800px;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row-reverse;
+
+  margin: 5rem;
 
 }
-@media (max-width: 920px) {
+main img {
+  height: 500px;
+  width: 700px;
+  
+}
+@media (max-width: 720px) {
   main{
-    background-position: top;
-    background-size: 80%;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+  }
+  main img {
+    height: 80%;
+    width: 90%;
+  }
+  main div{
+    align-items: center;
+    font-size: 2rem;
+  }
+  main h1{
+    font-size: 1rem;
   }
 }
 
+main div{
+  display: grid;
+  grid-template-columns: 1fr ;
+}
 main h1{
-  font-size: 9rem;
+  font-size: 7rem;
 }
 
 main p{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   font-size: 2rem;
 }
 main button{
   background-color: #D2872C;
   border-radius: 15px;
 
-  padding: 2rem 10rem;
+  height: 50px;
+  width: 50%;
+  align-items: center;
+  
   margin-top: 5rem;
 
   color: white;
